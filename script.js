@@ -16,10 +16,11 @@ function getComputerChoice(){
     return computerChoice; //returns the value assigned to that key, in this case PPT
 }
 
+/*
 function getHumanChoice(){
     let humanChoice = prompt("Pick: Rock, Paper or Scissors!");
     return humanChoice;
-}
+}*/
 
 function playRound(hChoice, computerChoice){
     const humanChoice = hChoice.charAt(0).toUpperCase() + hChoice.slice(1).toLowerCase();
@@ -65,7 +66,7 @@ function playRound(hChoice, computerChoice){
     }
 
 }
-
+/*
 function playGame(){
     for(let i=0; i<5; i++){
         console.log(playRound(getHumanChoice(), getComputerChoice()));
@@ -83,5 +84,6 @@ function playGame(){
 }
 
 console.log(playGame());
+*/
 
 

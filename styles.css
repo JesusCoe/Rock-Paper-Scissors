@@ -1,0 +1,24 @@
+body{
+    display: flex;
+    font-family: Roboto, Helvetica, sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-container{
+    justify-content: center;
+}
+
+.button-container{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.choices{
+    border-radius: 10px;
+    padding: 10px 18px;
+    border: solid #121C82;
+    background-color: #f7f7f8;
+    font-size: 14px;
+}

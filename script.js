@@ -32,12 +32,23 @@ let computerScore = 0;
     }
 
     const winner = (player, computer) => {
-        const result = document.querySelector('result');
+        const result = document.querySelector('.result');
         const playerScoreBoard = document.querySelector('.p-count');
         const computerScoreBoard = document.querySelector('.c-count');
 
         if(player === computer){
-            result.textContent('Tie!, you both picked ${computer}')
+            result.textContent = `Tie!, you both picked ${computer}`;
+            computerScore++;
+            computerScoreBoard.textContent = computerScore;
+        } 
+        else if(
+        (player == 'Rock' && computer == 'Scissors') ||
+        (player == 'Paper' && computer == 'Rock') ||
+        (player == 'Scissors' && computer == 'Paper')){
+            result.textContent = `You win!, ${player} beats ${computer}`;
+
+        } else {
+            result.textContent = `You lose!, computer chose ${computer} and you ${player}`;
         }
     }
 

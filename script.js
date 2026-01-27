@@ -38,21 +38,37 @@ let computerScore = 0;
 
         if(player === computer){
             result.textContent = `Tie!, you both picked ${computer}`;
-            computerScore++;
-            computerScoreBoard.textContent = computerScore;
         } 
         else if(
         (player == 'Rock' && computer == 'Scissors') ||
         (player == 'Paper' && computer == 'Rock') ||
         (player == 'Scissors' && computer == 'Paper')){
             result.textContent = `You win!, ${player} beats ${computer}`;
-
+            humanScore++;
+            playerScoreBoard.textContent = humanScore;
         } else {
             result.textContent = `You lose!, computer chose ${computer} and you ${player}`;
+            computerScore++;
+            computerScoreBoard.textContent = computerScore;
+        }
+
+         if(humanScore === 5){
+            result.textContent = `You won the game! You reached 5 points!`;
+            humanScore = 0;
+            computerScore = 0;
+            playerScoreBoard.textContent = 0; computerScoreBoard.textContent = 0;
+        }  else if(computerScore === 5){
+            result.textContent = `You lost the game! The computer out smarted you :(`;
+            humanScore = 0;
+            computerScore = 0;
+            playerScoreBoard.textContent = 0; computerScoreBoard.textContent = 0;
         }
     }
 
+    playGame();
 }
+
+game();
 
 
 
